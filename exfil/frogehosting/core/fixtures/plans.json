@@ -1,0 +1,50 @@
+[
+  {
+    "model": "core.plan",
+    "pk": 1,
+    "fields": {
+      "name": "Tadpole",
+      "slug": "tadpole",
+      "price_monthly": "19900",
+      "ram_gb": 2,
+      "cpu_cores": "1.0",
+      "disk_gb": 10,
+      "max_players": 10,
+      "description": "Do'stlar bilan kichik SMP uchun.",
+      "is_popular": false,
+      "order": 1
+    }
+  },
+  {
+    "model": "core.plan",
+    "pk": 2,
+    "fields": {
+      "name": "Frog",
+      "slug": "frog",
+      "price_monthly": "39900",
+      "ram_gb": 4,
+      "cpu_cores": "2.0",
+      "disk_gb": 25,
+      "max_players": 30,
+      "description": "Modlar va plaginlar bilan ishlash uchun eng mos tarif.",
+      "is_popular": true,
+      "order": 2
+    }
+  },
+  {
+    "model": "core.plan",
+    "pk": 3,
+    "fields": {
+      "name": "Bullfrog",
+      "slug": "bullfrog",
+      "price_monthly": "79900",
+      "ram_gb": 8,
+      "cpu_cores": "4.0",
+      "disk_gb": 50,
+      "max_players": 80,
+      "description": "Katta jamoalar va yuklama og'ir serverlar uchun.",
+      "is_popular": false,
+      "order": 3
+    }
+  }
+]
