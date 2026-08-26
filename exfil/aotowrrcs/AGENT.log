@@ -1,0 +1,186 @@
+2026-08-26 12:17:26,723 [root] DEBUG: we are 64bit, setting the clock as dd-mm-yy
+2026-08-26 19:32:10,013 [root] DEBUG: Starting analyzer from: C:\aotowrrcs
+2026-08-26 19:32:10,013 [root] DEBUG: Storing results at: C:\uXwOKW
+2026-08-26 19:32:10,013 [root] DEBUG: Pipe server name: \\.\PIPE\oVkbKZM
+2026-08-26 19:32:10,013 [root] INFO: No analysis package specified, trying to detect it automagically
+2026-08-26 19:32:10,013 [root] DEBUG: User provided password: None
+2026-08-26 19:32:10,013 [lib.core.packages] DEBUG: Checking '703a8f685824a46ef311b589b0a30e2232b1c81892c8362773d269978713c127' (type: 'PE32+ executable (GUI) x86-64, for MS Windows')
+2026-08-26 19:32:10,013 [root] INFO: Automatically selected analysis package "exe"
+2026-08-26 19:32:10,013 [root] INFO: executable name C:\703a8f685824a46ef311b589b0a30e2232b1c81892c8362773d269978713c127.exe 
+2026-08-26 19:32:10,013 [root] INFO: Package name modules.packages.exe
+2026-08-26 19:32:10,138 [root] INFO: add_analyzer_guest_folders(self) - info needed for the function ends here
+C:\aotowrrcs\modules\auxiliary\human.py:339: SyntaxWarning: name 'is_safe_mode' is used prior to global declaration
+  global is_safe_mode
+C:\aotowrrcs\modules\auxiliary\human.py:532: SyntaxWarning: name 'open_button_is_pushed' is used prior to global declaration
+  global open_button_is_pushed
+2026-08-26 19:32:12,668 [comtypes] DEBUG: CoInitializeEx(None, 2)
+2026-08-26 19:32:13,341 [comtypes.client._code_cache] INFO: Imported existing <module 'comtypes.gen' from 'C:\Python27\lib\site-packages\comtypes\gen\__init__.pyc'>
+2026-08-26 19:32:13,341 [comtypes.client._code_cache] INFO: Using writeable comtypes cache directory: 'C:\Python27\lib\site-packages\comtypes\gen'
+2026-08-26 19:32:13,341 [comtypes.client._generate] DEBUG: GetModule(oleacc.dll), resolved: False
+2026-08-26 19:32:13,357 [comtypes.client._generate] DEBUG: GetModule(TLIBATTR(GUID={1EA4DBF0-3C3B-11CF-810C-00AA00389B71}, Version=1.1, LCID=0, FLags=0xc))
+2026-08-26 19:32:13,466 [comtypes] DEBUG: Release <POINTER(ITypeLib) ptr=0x848038 at 3d0ac10>
+2026-08-26 19:32:15,028 [root] INFO: List all Auxiliary subclasses: SetEphemeralPortRange, SetGuestClock, changemacrosettings, WMI_stats, AMSI, Browser, Disguise, HMP, Human, iNetCheck, InstallCertificate, Peep, perip, SAVGuest, Screenshots, SigCheck, Sync, WindowTitle, ZSDR
+2026-08-26 19:32:15,028 [root] DEBUG: got fields: ['procmemdump=1']
+2026-08-26 19:32:15,028 [modules.auxiliary.00_ephemeral_port_range] INFO: SetEphemeralPortRange auxiliary starting
+2026-08-26 19:32:15,028 [modules.auxiliary.00_ephemeral_port_range] DEBUG: Running: ['c:\\windows\\system32\\netsh.exe', 'int', 'ipv4', 'set', 'dynamicport', 'tcp', 'start=20603', 'num=999']
+2026-08-26 19:32:17,121 [modules.auxiliary.00_ephemeral_port_range] DEBUG: Running: ['c:\\windows\\system32\\netsh.exe', 'int', 'ipv4', 'set', 'dynamicport', 'udp', 'start=20603', 'num=999']
+2026-08-26 19:32:17,497 [modules.auxiliary.00_ephemeral_port_range] DEBUG: Running: ['c:\\windows\\system32\\netsh.exe', 'int', 'ipv6', 'set', 'dynamicport', 'tcp', 'start=20603', 'num=999']
+2026-08-26 19:32:17,871 [modules.auxiliary.00_ephemeral_port_range] DEBUG: Running: ['c:\\windows\\system32\\netsh.exe', 'int', 'ipv6', 'set', 'dynamicport', 'udp', 'start=20603', 'num=999']
+2026-08-26 19:32:18,216 [root] DEBUG: Started auxiliary module SetEphemeralPortRange
+2026-08-26 19:32:18,216 [modules.auxiliary.05_set_guest_clock] INFO: SetGuestClock auxiliary disabled
+2026-08-26 19:32:18,216 [root] DEBUG: Started auxiliary module SetGuestClock
+2026-08-26 19:32:18,216 [root] INFO: Skip macro settings for non-office package..
+2026-08-26 19:32:18,216 [root] INFO: Auxiliary module WMI_Stats is skipped..
+2026-08-26 19:32:18,216 [modules.auxiliary.amsi] INFO: AMSI auxiliary starting
+2026-08-26 19:32:18,216 [root] DEBUG: Started auxiliary module AMSI
+2026-08-26 19:32:18,216 [modules.auxiliary.browser] DEBUG: in Browser run
+2026-08-26 19:32:18,216 [modules.auxiliary.browser] DEBUG: options: {'startbrowser': False, 'upload_max_size': 10485760, 'browser_wait_time': 30, 'file_type': 'PE32+ executable (GUI) x86-64, for MS Windows', 'ip': '172.22.101.1', 'id': 1452, 'procmemdump': '1', 'port': 2042, 'max_dumps': 70, 'category': 'file', 'browser_url': 'google.com', 'clock': '20260826T19:32:10', 'custom': 'allocator_platform=windows-7,environment=prod,request_key=WZ_703a8f685824a46ef311b589b0a30e2232b1c81892c8362773d269978713c127_20260826_193208_213470_21347,allocator_url=http://127.0.0.1:8081/allocator,job_id=23ff5963c714cb911bea48e55f3c66bc,mitm-off', 'platform': '64bit', 'file_name': 'C:\\703a8f685824a46ef311b589b0a30e2232b1c81892c8362773d269978713c127.exe', 'file_sha256': '703a8f685824a46ef311b589b0a30e2232b1c81892c8362773d269978713c127', 'max_analysed_processes': 10, 'enforce_timeout': False, 'executable_name': 'C:\\703a8f685824a46ef311b589b0a30e2232b1c81892c8362773d269978713c127.exe', 'target': '/opt/warzone/lib/cuckoo/storage/tmp/WZ_703a8f685824a46ef311b589b0a30e2232b1c81892c8362773d269978713c127_20260826_193208_213470_21347/703a8f685824a46ef311b589b0a30e2232b1c81892c8362773d269978713c127', 'package': '', 'terminate_processes': False, 'file_sha1': 'ec225b3a3a08c2d07cf98b20829e7a70a1690060', 'timeout': 120, 'options': 'procmemdump=1', 'browser': 'IE'}
+2026-08-26 19:32:18,216 [modules.auxiliary.browser] DEBUG: url: google.com
+2026-08-26 19:32:18,216 [root] DEBUG: Started auxiliary module Browser
+The operation completed successfully.
+ERROR: Access is denied.
+The operation completed successfully.
+2026-08-26 19:32:19,107 [root] DEBUG: Started auxiliary module Disguise
+2026-08-26 19:32:19,107 [modules.auxiliary.hmp] INFO: HMP auxiliary started
+2026-08-26 19:32:19,107 [modules.auxiliary.hmp] DEBUG: custom_opts: ['allocator_platform=windows-7', 'environment=prod', 'request_key=WZ_703a8f685824a46ef311b589b0a30e2232b1c81892c8362773d269978713c127_20260826_193208_213470_21347', 'allocator_url=http://127.0.0.1:8081/allocator', 'job_id=23ff5963c714cb911bea48e55f3c66bc', 'mitm-off']
+2026-08-26 19:32:19,107 [modules.auxiliary.hmp] DEBUG: Total EventLog records to check: 9356
+2026-08-26 19:32:21,168 [modules.auxiliary.hmp] DEBUG: EventLog query complete. Closing handle.
+2026-08-26 19:32:21,184 [modules.auxiliary.hmp] DEBUG: Preliminary eventlog check (ensure no existing alerts in log): 0
+2026-08-26 19:32:21,184 [modules.auxiliary.hmp] DEBUG: Starting the HMP service...
+2026-08-26 19:32:21,184 [modules.auxiliary.hmp] DEBUG: About to start HMP service
+2026-08-26 19:32:23,621 [modules.auxiliary.hmp] DEBUG: The HitmanPro.Alert service service is starting.
+2026-08-26 19:32:23,621 [modules.auxiliary.hmp] DEBUG: The HitmanPro.Alert service service was started successfully.
+2026-08-26 19:32:23,621 [modules.auxiliary.hmp] DEBUG: HMP service started successfully
+2026-08-26 19:32:23,621 [root] DEBUG: Started auxiliary module HMP
+2026-08-26 19:32:23,621 [root] DEBUG: Started auxiliary module Human
+2026-08-26 19:32:23,621 [modules.auxiliary.inetcheck] INFO: iNetCheck auxiliary starting
+2026-08-26 19:32:23,686 [modules.auxiliary.inetcheck] INFO:  HTTP fail 500: Internal Server fail
+2026-08-26 19:32:23,700 [modules.auxiliary.inetcheck] INFO: Internet Connectivity at Start: Connected
+2026-08-26 19:32:23,700 [root] DEBUG: Started auxiliary module iNetCheck
+root "Trusted Root Certification Authorities"
+Signature matches Public Key
+Related Certificates:
+
+Exact match:
+Element 231:
+Serial Number: 0e77a754a6fb
+Issuer: O=mitmproxy, CN=mitmproxy
+ NotBefore: 26/05/2020 23:05
+ NotAfter: 28/05/2023 23:05
+Subject: O=mitmproxy, CN=mitmproxy
+Signature matches Public Key
+Root Certificate: Subject matches Issuer
+Cert Hash(sha1): 929c8820806df85b2b0643b90718dccf73038dfc
+
+Certificate "mitmproxy" already in store.
+CertUtil: -addstore command completed successfully.
+2026-08-26 19:32:24,513 [modules.auxiliary.installcert] INFO: Successfully installed CER certificate.
+2026-08-26 19:32:24,513 [root] DEBUG: Started auxiliary module InstallCertificate
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO: PEEP Auxiliary started
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] DEBUG: Getting randomized python name
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO: Randomized python.exe is: 'c:\nv\rp09zk2.exe'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO: platform_info: {'node': 'AMAZING-AVOCADO', 'system': 'Windows', 'machine': 'AMD64', 'version': '10.0.19041', 'release': '10', 'processor': 'Intel64 Family 6 Model 42 Stepping 1, GenuineIntel'}
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] DEBUG: Getting environment variables
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   TMP = 'c:\users\harryj~1\appdata\local\temp'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   COMPUTERNAME = 'COMPNAME_4604'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   USERDOMAIN = 'AMAZING-AVOCADO'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   PSMODULEPATH = 'c:\program files\windowspowershell\modules;c:\windows\system32\windowspowershell\v1.0\modules'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   COMMONPROGRAMFILES = 'c:\program files (x86)\common files'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   PROCESSOR_IDENTIFIER = 'Intel64 Family 6 Model 42 Stepping 1, GenuineIntel'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   PROGRAMFILES = 'c:\program files (x86)'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   PROCESSOR_REVISION = '2a01'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   SYSTEMROOT = 'c:\windows'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   PATH = 'c:\python27\lib\site-packages\pywin32_system32;c:\programdata\oracle\java\javapath;c:\windows\system32;c:\windows;c:\windows\system32\wbem;c:\windows\system32\windowspowershell\v1.0\;c:\windows\system32\openssh\;c:\users\harry johnson\appdata\local\microsoft\windowsapps;'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   PROGRAMFILES(X86) = 'c:\program files (x86)'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   DRIVERDATA = 'c:\windows\system32\drivers\driverdata'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   TEMP = 'c:\users\harryj~1\appdata\local\temp'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   COMMONPROGRAMFILES(X86) = 'c:\program files (x86)\common files'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   PROCESSOR_ARCHITECTURE = 'x86'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   ALLUSERSPROFILE = 'c:\programdata'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   LOCALAPPDATA = 'c:\users\harry johnson\appdata\local'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   FPS_BROWSER_USER_PROFILE_STRING = 'Default'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   HOMEPATH = '\Users\Harry Johnson'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   USERDOMAIN_ROAMINGPROFILE = 'AMAZING-AVOCADO'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   PROGRAMW6432 = 'c:\program files'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   USERNAME = 'Harry Johnson'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   LOGONSERVER = '\\AMAZING-AVOCADO'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   PROMPT = '$P$G'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   COMSPEC = 'c:\windows\system32\cmd.exe'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   PROGRAMDATA = 'c:\programdata'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   ONEDRIVE = 'c:\users\harry johnson\onedrive'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   FPS_BROWSER_APP_PROFILE_STRING = 'Internet Explorer'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   SESSIONNAME = 'Console'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   PATHEXT = '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   WINDIR = 'c:\windows'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   HOMEDRIVE = 'C:'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   APPDATA = 'c:\users\harry johnson\appdata\roaming'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   SYSTEMDRIVE = 'C:'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   NUMBER_OF_PROCESSORS = '8'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   PROCESSOR_LEVEL = '6'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   PROCESSOR_ARCHITEW6432 = 'AMD64'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   COMMONPROGRAMW6432 = 'c:\program files\common files'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   OS = 'Windows_NT'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   PUBLIC = 'c:\users\public'
+2026-08-26 19:32:24,513 [modules.auxiliary.peep] INFO:   USERPROFILE = 'c:\users\harry johnson'
+2026-08-26 19:32:24,528 [lib.common.results] INFO: Uploaded file C:\guest_data.log to host as guest\guest_data.log
+2026-08-26 19:32:24,528 [root] DEBUG: Started auxiliary module Peep
+2026-08-26 19:32:24,543 [modules.auxiliary.perip] INFO: Skipping embedded file extraction
+2026-08-26 19:32:24,543 [root] DEBUG: Started auxiliary module perip
+2026-08-26 19:32:24,543 [modules.auxiliary.sav_guest] INFO: SAV guest module started
+2026-08-26 19:32:24,543 [modules.auxiliary.sav_guest] DEBUG: custom_opts: ['allocator_platform=windows-7', 'environment=prod', 'request_key=WZ_703a8f685824a46ef311b589b0a30e2232b1c81892c8362773d269978713c127_20260826_193208_213470_21347', 'allocator_url=http://127.0.0.1:8081/allocator', 'job_id=23ff5963c714cb911bea48e55f3c66bc', 'mitm-off']
+2026-08-26 19:32:24,700 [modules.auxiliary.sav_guest] INFO: sav service is active and running
+2026-08-26 19:32:24,918 [modules.auxiliary.sav_guest] INFO: Tamper protection enable result: SED Tamper Protection is enabled. New password: 433402339354
+2026-08-26 19:32:24,918 [modules.auxiliary.sav_guest] DEBUG: sb_memory_scan thread
+2026-08-26 19:32:24,918 [modules.auxiliary.sav_guest] DEBUG: Started thread
+2026-08-26 19:32:24,918 [modules.auxiliary.sav_guest] DEBUG: Fast conviction thread not created
+2026-08-26 19:32:24,918 [root] DEBUG: Started auxiliary module SAVGuest
+2026-08-26 19:32:24,934 [root] DEBUG: Started auxiliary module Screenshots
+2026-08-26 19:32:24,934 [modules.auxiliary.sigcheck] INFO: Started SigCheck auxiliary...
+2026-08-26 19:32:24,934 [modules.auxiliary.sigcheck] DEBUG: Encoding is 'cp1252'
+2026-08-26 19:32:24,934 [modules.auxiliary.sigcheck] INFO: SigCheck 64bit
+2026-08-26 19:32:24,934 [modules.auxiliary.sigcheck] INFO: Looking for 'C:\aotowrrcs\bin\sigcheck64.exe'
+2026-08-26 19:32:24,934 [modules.auxiliary.sigcheck] INFO: Running '['C:\\aotowrrcs\\bin\\sigcheck64.exe', '-nobanner', '-accepteula', '-a', '-i', 'C:\\703a8f685824a46ef311b589b0a30e2232b1c81892c8362773d269978713c127.exe']'...
+2026-08-26 19:32:25,404 [lib.common.results] INFO: Uploaded file C:\sigcheck.log to host as guest\sigcheck.log
+2026-08-26 19:32:25,404 [modules.auxiliary.sigcheck] DEBUG: File 'sigcheck.log' uploaded
+2026-08-26 19:32:25,404 [root] DEBUG: Started auxiliary module SigCheck
+2026-08-26 19:32:25,404 [modules.auxiliary.sync] INFO: started Sync auxiliary...
+2026-08-26 19:32:25,404 [modules.auxiliary.sync] INFO: looking for 'C:\aotowrrcs\bin\sync.exe'
+2026-08-26 19:32:25,404 [root] DEBUG: Started auxiliary module Sync
+2026-08-26 19:32:25,404 [root] DEBUG: Started auxiliary module WindowTitle
+2026-08-26 19:32:25,404 [modules.auxiliary.zsdr] INFO: ZSDR auxiliary starting
+2026-08-26 19:32:25,418 [modules.auxiliary.zsdr] INFO: Deleted old log: c:\programdata\sophos\sophos data recorder\data\cur_processes.xyz
+2026-08-26 19:32:25,418 [modules.auxiliary.zsdr] INFO: Deleted old log: c:\programdata\sophos\sophos data recorder\data\old_processes.xyz
+2026-08-26 19:32:25,418 [modules.auxiliary.zsdr] DEBUG: Starting the SDR process...
+2026-08-26 19:32:25,700 [modules.auxiliary.zsdr] DEBUG: SDRService.exe copy to: c:\program files (x86)\sophos\sophos data recorder\sdrservice.exe
+2026-08-26 19:32:25,700 [modules.auxiliary.zsdr] DEBUG: About to start SDR service
+2026-08-26 19:32:28,371 [modules.auxiliary.zsdr] DEBUG: ['The SophosDataRecorderService service is starting.\r\n', 'The SophosDataRecorderService service was started successfully.\r\n', '\r\n']
+2026-08-26 19:32:30,371 [modules.auxiliary.zsdr] DEBUG: SDR service started successfully
+2026-08-26 19:32:30,371 [root] DEBUG: Started auxiliary module ZSDR
+2026-08-26 19:32:30,371 [root] DEBUG: Initialised the cuckoomon logging
+2026-08-26 19:32:30,371 [root] DEBUG: got fields: ['procmemdump=1']
+2026-08-26 19:32:30,388 [lib.common.results] INFO: Uploaded file C:\guest_execution.log to host as guest\guest_execution.log
+2026-08-26 19:32:30,388 [root] DEBUG: File 'guest_execution.log' uploaded
+2026-08-26 19:32:30,388 [lib.api.process] DEBUG: current directory path is set:C:\Users\HARRYJ~1\AppData\Local\Temp
+2026-08-26 19:32:30,496 [lib.api.process] INFO: Successfully executed process from path "C:\703a8f685824a46ef311b589b0a30e2232b1c81892c8362773d269978713c127.exe" with arguments "" with pid 2848
+2026-08-26 19:32:30,513 [lib.api.process] DEBUG: dll: C:\aotowrrcs\dll\ibuTry.dll
+2026-08-26 19:32:30,513 [lib.api.process] DEBUG: done writeprocessmemory
+2026-08-26 19:32:30,528 [lib.api.process] DEBUG: Using QueueUserAPC injection.
+2026-08-26 19:32:30,528 [lib.api.process] INFO: QueueUserAPC failed on 64bit Process with pid 2848
+2026-08-26 19:32:32,543 [lib.api.process] INFO: Successfully resumed process with pid 2848
+2026-08-26 19:32:32,543 [root] INFO: Added new process to list with pid: 2848
+2026-08-26 19:32:32,543 [root] INFO: Entering main loop
+2026-08-26 19:32:32,543 [root] INFO: PROCESS_LOCK was not locked when I last looked...
+2026-08-26 19:32:33,575 [root] INFO: PROCESS_LOCK was not locked when I last looked...
+2026-08-26 19:32:34,825 [root] INFO: PROCESS_LOCK was not locked when I last looked...
+2026-08-26 19:32:35,937 [root] INFO: PROCESS_LOCK was not locked when I last looked...
+2026-08-26 19:32:37,184 [root] INFO: PROCESS_LOCK was not locked when I last looked...
+2026-08-26 19:32:38,453 [root] INFO: PROCESS_LOCK was not locked when I last looked...
+2026-08-26 19:32:39,700 [root] INFO: PROCESS_LOCK was not locked when I last looked...
+2026-08-26 19:32:40,795 [root] INFO: PROCESS_LOCK was not locked when I last looked...
+2026-08-26 19:32:41,841 [root] INFO: PROCESS_LOCK was not locked when I last looked...
+2026-08-26 19:32:42,966 [root] INFO: PROCESS_LOCK was not locked when I last looked...
+2026-08-26 19:32:44,043 [root] INFO: PROCESS_LOCK was not locked when I last looked...
+2026-08-26 19:32:45,122 [root] INFO: PROCESS_LOCK was not locked when I last looked...
+2026-08-26 19:32:45,122 [modules.auxiliary.sav_guest] INFO: Background Memory Scan Counter : 0
+2026-08-26 19:32:46,247 [root] INFO: PROCESS_LOCK was not locked when I last looked...
+2026-08-26 19:32:47,325 [root] INFO: PROCESS_LOCK was not locked when I last looked...
